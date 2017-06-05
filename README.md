@@ -31,7 +31,7 @@ There is unminified source as well as example scripts under '/source' for help a
 
 ## Installation
 
-1. Upload the 'wp-ajax-page-loader' folder to the '/wp-content/plugins/' directory.
+1. Upload the 'ajax-page-loader' folder to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' page.
 3. Configure the plugin through the 'Ajax Page Loader' page under 'Settings'.
 
