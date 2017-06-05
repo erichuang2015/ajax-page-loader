@@ -227,4 +227,15 @@ if ( get_option( 'APL_disabled' ) != true ) {
 		}
 	}
 }
+add_filter( 'http_request_args', 'apl_prevent_update_check', 10, 2 );
+function apl_prevent_update_check( $response, $url ) {
+	if ( 0 === strpos( $url, 'https://api.wordpress.org/plugins/update-check/1.1/' ) ) {
+		$basename = plugin_basename( __FILE__ );
+		$plugins  = json_decode( $response['body']['plugins'] );
+		unset( $plugins->plugins->$basename );
+		unset( $plugins->active[ array_search( $basename, $plugins->active ) ] );
+		$response['body']['plugins'] = json_encode( $plugins );
+	}
+	return $response;
+}
 ?>
