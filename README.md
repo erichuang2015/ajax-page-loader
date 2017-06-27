@@ -1,9 +1,9 @@
 # AJAX Page Loader / ***WordPress Plugin***
 
 
-**Requires at least:** Unknown
+**Requires at least:** Unknown - 4.7.5
 
-**Tested up to:** 4.7.5
+**Tested up to:** 4.8
 
 **License:** Unlicensed
 
