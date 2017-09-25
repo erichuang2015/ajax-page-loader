@@ -2,9 +2,11 @@
 
 
 **Requires at least WordPress:** Unknown - 4.7.5
+
 **Requires at least jQuery:** Unknown - 1.12.4
 
 **Tested up to WordPress:** 4.8.2
+
 **Tested up to jQuery:** 3.1.1
 
 **License:** Unlicensed
