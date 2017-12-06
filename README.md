@@ -5,9 +5,9 @@
 
 **Requires at least jQuery:** Unknown - 1.12.4
 
-**Tested up to WordPress:** 4.8.2
+**Tested up to WordPress:** 4.9.1
 
-**Tested up to jQuery:** 3.1.1
+**Tested up to jQuery:** 3.2.1
 
 **License:** Unlicensed
 
@@ -29,7 +29,7 @@
 	* Access to AJAX XHR and Complete functions
 	* Access to pre-AJAX functions
 
-The idea is use this plugin to add AJAX loading to your site, then script support for any theme, plugins or features you want to incorporate it with.
+This plugin was designed to let a developer add AJAX to a site, then let the plugin manage it's integration with themes and other plugins.
 
 There is unminified source as well as example scripts under '/source' for help and ideas.
 
