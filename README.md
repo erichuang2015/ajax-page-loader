@@ -5,7 +5,7 @@
 
 **Requires at least jQuery:** Unknown - 1.12.4
 
-**Tested up to WordPress:** 4.9.1
+**Tested up to WordPress:** 4.9.6
 
 **Tested up to jQuery:** 3.2.1
 
