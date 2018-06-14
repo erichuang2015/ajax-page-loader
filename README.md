@@ -1,13 +1,8 @@
 # AJAX Page Loader / ***WordPress Plugin***
 
-
 **Requires at least WordPress:** Unknown - 4.7.5
 
-**Requires at least jQuery:** Unknown - 1.12.4
-
 **Tested up to WordPress:** 4.9.6
-
-**Tested up to jQuery:** 3.2.1
 
 **License:** Unlicensed
 
@@ -42,3 +37,8 @@ There is unminified source as well as example scripts under '/source' for help a
 ## Changelog
 ### 0.0.1
 * Initial Release
+### 0.0.2
+* Removed jQuery framework dependency, plugin is now 100% pure Javascript.
+* Tested to work with various circa IE11 browsers.
+* Refactored code quite a bit, used some better coding practices, smaller file size.
+* Started testing with WooCommerce.. I plan on coding full compatability for version 0.0.3
