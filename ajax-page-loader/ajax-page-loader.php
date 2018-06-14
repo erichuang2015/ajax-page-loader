@@ -3,7 +3,7 @@
  * Plugin Name: AJAX Page Loader
  * Plugin URI: https://github.com/thefarside/ajax-page-loader
  * Description: A lightweight AJAX page loader intended for developers.
- * Version: 0.0.1
+ * Version: 0.0.2
  */
 if ( is_admin() ) {
 	add_action( 'admin_menu', 'admin_menu_APL' );
@@ -114,9 +114,9 @@ if ( is_admin() ) {
 			delete_option( 'APL_admin_login_disabled' );
 		}
 	}
-	add_action(  'wp_ajax_jquery_vars_APL', 'jquery_vars_APL_function'  );
-	add_action(  'wp_ajax_nopriv_jquery_vars_APL', 'jquery_vars_APL_function'  );
-	function jquery_vars_APL_function() {
+	add_action(  'wp_ajax_APL_get_vars', 'APL_get_vars_function'  );
+	add_action(  'wp_ajax_nopriv_APL_get_vars', 'APL_get_vars_function'  );
+	function APL_get_vars_function() {
 		$variables = [
 		get_option( 'APL_content_id' ),
 		get_option( 'APL_search_class' ),
@@ -216,13 +216,13 @@ if ( get_option( 'APL_comments_disabled' ) != true ) {
 if ( get_option( 'APL_disabled' ) != true ) {
 	add_action( 'wp_enqueue_scripts', 'register_script_APL' );
 	function register_script_APL() {
-		wp_register_script( 'apl',  plugins_url(  '/scripts/apl.js', __FILE__   ), array( 'jquery' ), '', false );
+		wp_register_script( 'apl',  plugins_url(  '/scripts/apl.js', __FILE__   ), array(), '', false );
 		wp_enqueue_script( 'apl' );
 	}
 	if ( get_option( 'APL_admin_login_disabled' ) != true ) {
 		add_action(  'login_enqueue_scripts', 'register_admin_script_APL', 1  );
 		function register_admin_script_APL() {
-			wp_register_script( 'apl_admin',  plugins_url(  '/scripts/apl.js', __FILE__  ), array( 'jquery' ), '', false );
+			wp_register_script( 'apl_admin',  plugins_url(  '/scripts/apl.js', __FILE__  ), array(), '', false );
 			wp_enqueue_script( 'apl_admin' );
 		}
 	}
